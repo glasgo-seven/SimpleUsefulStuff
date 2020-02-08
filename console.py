@@ -27,8 +27,8 @@ def loading(time: int):
             t += 1
     print("LOADING COMPLETE")
     sleep(0.5)
-
+'''
 def loadingBar(time: int):
     sing = '█'
     bar = [' ' for x in range(10)]
-    
+'''    
