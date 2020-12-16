@@ -1,4 +1,4 @@
-from colors import colored
+from le_colors import colored
 
 class Entity():
     def __init__(self):

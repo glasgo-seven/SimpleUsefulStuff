@@ -26,23 +26,27 @@ def phrase(speaker, line, color, on_color = 'on_black'):
     sleep(0.75)
     print('\n ' + colored(speaker, color, on_color) + ': ' + line, end = '')
 
-def emote(emoter, emotion, color = 'bright_black', on_color = 'on_black'):
-    sleep(0.75)
-    print(colored('\n [' + emoter + ' is ' + line + ']', color, on_color), end = '')
+def emote_old(emoter, emotion, color = 'bright_black', on_color = 'on_black'):
+	print(colored('\n [' + emoter + ' is ' + emotion + ']', color, on_color), end = '')
+	sleep(0.75)
+
+def emote(emotion, color = 'bright_black', on_color = 'on_black'):
+	print(colored('\n [' + emotion + ']', color, on_color), end = '')
+	sleep(0.75)
 
 def answer_handler(ch):
-    sleep(0.5)
-    print('\n')
-    for i in range(1, len(ch) + 1):
-        print('        ' + str(i) + ') ' + ch[i-1])
-    q = False
-    while not q:
-        ans = input('        Ответ: ')
-        if is_integer(ans) and int(ans) > 0 and int(ans) < len(ch) + 1:
-            q = True
-        else:
-            print(colored('        Invalid input!', 'red'))
-    return [int(ans), ch[int(ans)-1]]
+	print('\n')
+	for i in range(1, len(ch) + 1):
+		print('\t\t' + str(i) + ') ' + ch[i-1])
+	q = False
+	while not q:
+		ans = input('\t\t>> ')
+		if is_integer(ans) and int(ans) > 0 and int(ans) < len(ch) + 1:
+			q = True
+		else:
+			print(colored('\t\tInvalid input!', 'red'))
+	sleep(0.5)
+	return [int(ans), ch[int(ans)-1]]
 
 
 line("Line test!")
