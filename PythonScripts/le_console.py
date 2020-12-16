@@ -1,5 +1,3 @@
-# version 0.4
-
 from os import system, name
 from time import sleep 
 
@@ -16,7 +14,7 @@ def exit():
     while c!='q':
         (c)
 
-def loading(time: int):
+def fake_loading_wheel(time: int):
     signs = ['|', '/', '─', '\\']
     t = 0
     while t < time:
@@ -28,7 +26,7 @@ def loading(time: int):
     print("LOADING COMPLETE")
     sleep(0.5)
 '''
-def loadingBar(time: int):
+def fake_loading_bar(time: int):
     sing = '█'
     bar = [' ' for x in range(10)]
 '''    
